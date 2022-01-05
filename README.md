@@ -9,8 +9,13 @@ To see the output just run `motd.sh`. This runs all the scripts in `modules`
 directory in order, `run-parts` style, and formats the output. One way to run
 it at each login is to add a line to `~/.profile` file:
 
+Need to load at /opt/motd
+
 ```
-/path-to-fancy-motd/motd.sh
+vim /etc/profile
+
+bash /opt/motd/motd.sh
+. /etc/ini.d/msm_profile
 ```
 
 To add a new module you can create a new script in `modules`. For the output to
